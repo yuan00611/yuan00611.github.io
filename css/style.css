@@ -190,7 +190,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../images/about/welcome-banner.jpg)no-repeat;
+    background:url(../img/welcomebackground.jpg)no-repeat;
     background-size:cover;
     background-position: center;
     height:890px;
@@ -276,7 +276,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
 /*.single-about-txt*/
 
 /*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
+.single-about-img{
+    position: relative;
+    box-shadow: 0px 5px 20px rgba(14,25,80,.30);
+    margin-top: 50px;
+}
 .single-about-img:before {
     position:  absolute;
     content: " ";
@@ -288,7 +292,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
 }
 .single-about-img img {
     max-width: 500px;
-    height: 468px;
+    height: 400px;
 }
 .about-list-icon{
     display: flex;
@@ -624,8 +628,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 /*.item img*/
 .isotope .item img{
-    width:100%;
-    height:100%;
+    width:200px;
+    height:200px;
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -ms-transition: .5s;
@@ -643,8 +647,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*.isotope-overlay*/
 .isotope-overlay{
     position:absolute;
-    height:100%;
-    width:100%;
+    height:200px;
+    width:250px;
     background:rgba(31,44,108,.5);
     display:flex;
     align-items:center;
@@ -668,6 +672,24 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 14px;
     text-align: center;
 }
+
+.modal{
+
+}
+
+.isotope-overlay button {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    /*background-color: rgba(31,44,108,0.01);
+    border-color: rgba(31,44,108,0.01);
+
+    text-transform: capitalize;
+    text-decoration:none;*/
+}
+
 .isotope .item:hover .isotope-overlay{
     -webkit-transform:scale(1);
     -moz-transform:scale(1);
@@ -676,6 +698,20 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform:scale(1);
     top:0;
 }/*.isotope-overlay*/
+
+
+.modal{
+    margin-top: 200px;
+}
+
+.modal-body a{
+    color: #51d2ff;
+    text-transform: capitalize;
+}
+
+.modal-body a:hover{
+    color: #16c3ff;
+}
 
 /*-------------------------------------
         10. Clients
@@ -727,8 +763,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     height:50px;
     text-transform:capitalize;
     margin-top: 3px;
-    background: #b636ff;
-    border: 1px solid #b636ff;
+    background: #51d2ff;
+    border: 1px solid #51d2ff;
     cursor:pointer;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
      -webkit-transition: .5s; 
@@ -753,8 +789,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     
 }
 .single-contact-btn:hover{
-    background: #9f00ff;
-    border: 1px solid #9f00ff;
+    background: #16c3ff;
+    border: 1px solid #16c3ff;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
 
@@ -805,7 +841,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transition: .3s;
 }
 .hm-foot-icon ul li>a:hover{
-    color: #b636ff;
+    color: #51d2ff;
 }/*hm-foot-icon*/
 
 .hm-footer-copyright p{

@@ -46,6 +46,8 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="css/responsive.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     </head>
 
 
@@ -79,10 +81,11 @@
 			                    <li class=" smooth-menu"><a href="#education">education</a></li>
 			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
 			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
+			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
 <!--
 			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
 			                    <li class="smooth-menu"><a href="#experience">experience</a></li> 			              
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
+			                    
 -->
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
@@ -104,7 +107,7 @@
 						<div class="header-text">
 							<h2>hi <span>,</span> i am <br> Debbie <br> Chen <span>.</span>   </h2>
 							<p>game designer and ui/ux designer</p>
-							<a href="assets/download/browney.txt" download>download resume</a>
+							<a href="download/resume.pdf" download>download resume</a>
 						</div><!--/.header-text-->
 					</div><!--/.col-->
 				</div><!-- /.row-->
@@ -124,7 +127,7 @@
 						<div class="col-sm-6">
 							<div class="single-about-txt">
 								<h3>
-									I am a Professional Game Designer and UI/UX Designer.
+									I am a Game Designer and UI/UX Designer.
 								</h3>
 								<p>
 									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam vo luptatem quia voluptas sit aspernatur aut odit aut fugit,
@@ -155,7 +158,7 @@
 						</div>
 						<div class="col-sm-offset-1 col-sm-5">
 							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="profile_image">
+								<img src="img/profile_image.jpg" alt="profile_image">
 								<div class="about-list-icon">
 									<ul>
 										<li>
@@ -306,11 +309,9 @@
 
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/p1.jpg" alt="portfolio image"/>
+										<img src="img/portfolio/g5_vangogh.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
+											<button type="button" data-toggle="modal" data-target="#vangogh"> VR Game</button>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
@@ -333,22 +334,18 @@
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
-										<img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
+										<img src="img/portfolio/g1_hnd.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<a href="#">
-												web design
-											</a>
+											<button type="button" data-toggle="modal" data-target="#hnd"> PC Game</button>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
 
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/p4.jpg" alt="portfolio image"/>
+										<img src="img/portfolio/g3_liberary.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
+											<button type="button" data-toggle="modal" data-target="#lib"> PC Game</button>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
@@ -730,6 +727,96 @@
 		</section><!--/.skills-->
 		<!--skills end -->
 
+				<!--contact start -->
+		<section id="contact" class="contact">
+			<div class="section-heading text-center">
+				<h2>contact me</h2>
+			</div>
+			<div class="container">
+				<div class="contact-content">
+					<div class="row">
+						<div class="col-md-offset-1 col-md-5 col-sm-6">
+							<div class="single-contact-box">
+								<div class="contact-form">
+									<form>
+										<div class="row">
+											<div class="col-sm-6 col-xs-12">
+												<div class="form-group">
+												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+											<div class="col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group">
+													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group">
+													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
+												</div><!--/.form-group-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="single-contact-btn">
+													<a class="contact-btn" href="#" role="button">submit</a>
+												</div><!--/.single-single-contact-btn-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+									</form><!--/form-->
+								</div><!--/.contact-form-->
+							</div><!--/.single-contact-box-->
+						</div><!--/.col-->
+						<div class="col-md-offset-1 col-md-5 col-sm-6">
+							<div class="single-contact-box">
+								<div class="contact-adress">
+									<div class="contact-add-head">
+										<h3>Debbie Chen</h3>
+										<p>Game designer</p>
+									</div>
+									<div class="contact-add-info">
+										<div class="single-contact-add-info">
+											<h3>phone</h3>
+											<p>+886-9-336-05037</p>
+										</div>
+										<div class="single-contact-add-info">
+											<h3>email</h3>
+											<p>yuan0061@gmail.com</p>
+										</div>
+										<div class="single-contact-add-info">
+											<h3>website</h3>
+											<p>https://yuan00611.github.io/</p>
+										</div>
+									</div>
+								</div><!--/.contact-adress-->
+								<div class="hm-foot-icon">
+									<ul>
+										<li><a href="#"><i class="fa fa-github"></i></a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li><!--/li-->
+									</ul><!--/ul-->
+								</div><!--/.hm-foot-icon-->
+							</div><!--/.single-contact-box-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.contact-content-->
+			</div><!--/.container-->
+
+		</section><!--/.contact-->
+		<!--contact end -->
+
+
 
 
 		<!--footer-copyright start-->
@@ -738,7 +825,10 @@
 				<div class="hm-footer-copyright text-center">
 					<p>
 						&copy; copyright Debbie Chen. design and developed by <a href="https://www.themesine.com/">themesine</a>
+						<br>
+						latest version: 2019/1/7 9:15 GMT+8:00
 					</p><!--/p-->
+					
 				</div><!--/.text-center-->
 			</div><!--/.container-->
 
@@ -751,6 +841,110 @@
 			
         </footer><!--/.footer-copyright-->
 		<!--footer-copyright end-->
+
+
+<!--portfolio vangogh modal-->
+<div id="vangogh" class="modal fade"  tabindex="-1" aria-hidden="true" data-keyboard="true">
+	<div class="modal-dialog modal-lg" style= "width:700px">
+    	<div class="modal-content">
+    		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">
+          			<span>&times;</span>
+        		</button>
+        		<div class="modal-title">
+          			Is Vincent Alright?
+        		</div>
+      		</div>
+
+      		<div class="modal-body" >
+        		This is a VR escape game.
+        		<br>
+        		<a href="https://www.youtube.com/watch?v=RsXp6hYUrVQ">demo video</a>
+
+      		</div>
+
+      		<!--<div class="modal-footer"></div>-->
+    	</div>
+  	</div>
+</div>
+
+<!--portfolio vangogh modal-->
+<div id="vangogh" class="modal fade"  tabindex="-1" aria-hidden="true" data-keyboard="true">
+	<div class="modal-dialog modal-lg" style= "width:700px">
+    	<div class="modal-content">
+    		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">
+          			<span>&times;</span>
+        		</button>
+        		<div class="modal-title">
+          			Is Vincent Alright?
+        		</div>
+      		</div>
+
+      		<div class="modal-body" >
+        		This is a VR escape game.
+        		<br>
+        		<a href="https://www.youtube.com/watch?v=RsXp6hYUrVQ" target="_blank">demo video</a>
+
+      		</div>
+
+      		<!--<div class="modal-footer"></div>-->
+    	</div>
+  	</div>
+</div>
+
+
+<!--portfolio hnd modal-->
+<div id="lib" class="modal fade"  tabindex="-1" aria-hidden="true" data-keyboard="true">
+	<div class="modal-dialog modal-lg" style= "width:700px">
+    	<div class="modal-content">
+    		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">
+          			<span>&times;</span>
+        		</button>
+        		<div class="modal-title">
+          			Liberary
+        		</div>
+      		</div>
+
+      		<div class="modal-body" >
+        		This is a serious game.
+        		<br>
+        		<a href="" target="_blank">Introduction video</a>
+
+      		</div>
+
+      		<!--<div class="modal-footer"></div>-->
+    	</div>
+  	</div>
+</div>
+
+
+<!--portfolio hnd modal-->
+<div id="hnd" class="modal fade"  tabindex="-1" aria-hidden="true" data-keyboard="true">
+	<div class="modal-dialog modal-lg" style= "width:700px">
+    	<div class="modal-content">
+    		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">
+          			<span>&times;</span>
+        		</button>
+        		<div class="modal-title">
+          			Human and Dog
+        		</div>
+      		</div>
+
+      		<div class="modal-body" >
+        		This is a escape game.
+        		<br>
+        		<a href="https://www.youtube.com/watch?v=ToEe0hTAWnI#t=43m53s" target="_blank">presentation video</a>
+
+      		</div>
+
+      		<!--<div class="modal-footer"></div>-->
+    	</div>
+  	</div>
+</div>
+
 
 
 
