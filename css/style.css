@@ -245,8 +245,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
 /*-------------------------------------
         4.  About
 --------------------------------------*/
-.about {padding: 50px 0 100px;}
-.about-content {padding-top: 100px;}
+.about {padding: 50px 0 50px;}
+.about-content {padding-top: 40px;}
 /*.single-about-txt*/
 .single-about-txt h3 {
     font-size:18px;
@@ -383,7 +383,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     
 }
 .skill-content{padding: 50px 0 80px;}
-.single-skill-content{padding-top: 100px;}
+.single-skill-content{padding-top: 40px;}
 .section-heading h2 {
     font-size: 24px;
     font-weight: 600;
@@ -764,9 +764,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 --------------------------------------*/
 .contact {
     background: #f9fbfd;
-    padding: 50px 0 100px;
+    padding: 50px 0 40px;
 }
-.single-contact-box {padding-top: 100px;}
+.single-contact-box {padding-top: 40px;}
 .contact-form  .form-group {
     margin-bottom: 20px;
     
@@ -835,6 +835,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     color:  #636a82;
     font-weight:  300;
     margin-top:  6px;
+    line-height: 1;
 }
 /* contact-adress */
 
@@ -854,12 +855,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 /*.contact-add-info */
 
+.info-web{
+    padding-top: 120px;
+}
+
 /*hm-foot-icon*/
 .hm-foot-icon {
    
 }
 .hm-foot-icon ul li{float:left;}
 .hm-foot-icon ul li>a {
+    padding-top: 10px;
+    font-size: 40px;
     color: #636a82;
     margin-right:18px;
     -webkit-transition: .3s; 
