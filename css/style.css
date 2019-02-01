@@ -738,7 +738,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     color: #51d2ff;
 }
 
-
+.max{width:100%;height:auto; cursor: pointer;}
+.min{width:140px;height:auto; cursor: pointer;}
 
 
 /*-------------------------------------
