@@ -1,0 +1,91 @@
+h3{
+	text-align: center;
+	padding: 20px;
+	color: #676a81;
+}
+
+a{
+	-webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
+
+a:hover{
+	color: #51d2ff;
+}
+
+.active > a{
+	padding-left: 4px;
+	color: #51d2ff;
+}
+
+#outline{
+	float: left;
+	position: fixed;
+	margin-top: -400px;
+	margin-left: 40px;
+}
+
+.ppage{
+	margin-top: 100px;
+
+}
+
+.highlight{
+	display: flex;
+	justify-content: center;
+	margin-top: -10px;
+}
+
+.highlightC{
+	margin: 80px;
+	text-align: center;
+
+}
+
+i{
+	/*color: #FFD433;
+	color: rgb(212,244,12);*/
+	color: #424242;
+}
+
+.describe{
+	padding-top: 130px;
+	margin-left: 200px;
+	margin-right: 180px;
+}
+
+.describe > h2,img{
+	text-align: center;
+	
+}
+
+.describe h2{
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.describe p{
+	text-align: left;
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+
+.describe h3{
+	text-align: left;
+	margin-left: -20px;
+	font-size: 22px;
+
+}
+
+#previous{
+	float: left;
+	margin-left: 150px;
+}
+
+#next{
+	float: right;
+	margin-right: 150px;
+}

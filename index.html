@@ -313,11 +313,22 @@
 				<div class="section-heading text-center">
 					<h2>portfolio</h2>
 				</div>
+
+				<!-- Tab links -->
+				<div class="tab">
+					<button class="tablinks active" onclick="portfolioCategory(event, 'uiux')">UI/UX</button>
+					<button class="tablinks" onclick="portfolioCategory(event, 'game')">Game/VR/AR</button>
+					<button class="tablinks" onclick="portfolioCategory(event, 'data')">Data</button>
+					<button class="tablinks" onclick="portfolioCategory(event, 'anim')">Animation</button>
+					<button class="tablinks" onclick="portfolioCategory(event, 'article')">Articles</button>
+					
+				</div>
+
 				<div class="container">
 					<div class="portfolio-content">
 						<div class="isotope">
-							<div class="row"> <!-- Games -->
-								<h3> Games</h3>
+							<div class="row tabcontent" id="game"> <!-- Games -->
+								<!-- <h3> Games</h3> -->
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -365,8 +376,8 @@
 
 							</div><!-- /.row -->
 
-							<div class="row"> <!--2D Animations-->
-								<h3> 2D Animations</h3>
+							<div class="row tabcontent" id="anim"> <!--2D Animations-->
+								<!-- <h3> 2D Animations</h3> -->
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -398,8 +409,8 @@
 
 							</div><!-- /.row -->
 
-							<div class="row"> <!--UI/UX Design-->
-								<h3>UI/UX Design</h3> 
+							<div class="row tabcontent" id="uiux"> <!--UI/UX Design-->
+								<!-- <h3>UI/UX Design</h3> -->
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -460,8 +471,8 @@
 
 							</div><!-- /.row -->
 
-							<div class="row"> <!--DataScience-->
-								<h3>Data Science</h3>
+							<div class="row tabcontent" id="data"> <!--DataScience-->
+								<!-- <h3>Data Science</h3> -->
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -522,8 +533,8 @@
 
 							</div><!-- /.row -->
 
-							<div class="row"> <!--Articles-->
-								<h3>Articles</h3>
+							<div class="row tabcontent" id="article"> <!--Articles-->
+								<!-- <h3>Articles</h3> -->
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -742,11 +753,11 @@
 									<div class="contact-add-info">
 										<div class="single-contact-add-info">
 											<h3>phone</h3>
-											<p>+886-9-336-05037</p>
+											<p>+1-512-496-1724</p>
 										</div>
 										<div class="single-contact-add-info">
 											<h3>email</h3>
-											<p>yuan0061@gmail.com</p>
+											<p>yuan0061@utexas.edu</p>
 										</div>
 										
 									</div>

@@ -55,6 +55,10 @@ $(document).ready(function(){
 			offset:0
 		});
 
+
+
+
+
 	// 3. Progress-bar
 	
 		var dataToggleTooTip = $('[data-toggle="tooltip"]');
