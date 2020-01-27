@@ -107,7 +107,7 @@
 					<div class="col-md-12 text-center">
 						<div class="header-text">
 							<h2>hi <span>,</span> i am <br> Debbie <br> Chen <span>.</span>   </h2>
-							<p>Human Computer Interaction(Game | UI/UX Design) | Data Analyst</p>
+							<p>Front-End Developer | Human Computer Interaction(Game | UI/UX Design) | Data Analyst</p>
 							<a href="download/resume.pdf" download>download resume</a>
 						</div><!--/.header-text-->
 					</div><!--/.col-->
@@ -128,10 +128,10 @@
 						<div class="col-sm-6">
 							<div class="single-about-txt">
 								<h3>
-									I am focus on Human Computer Interaction and interested in Game Design, UI/UX Design and Data Analyst.
+									I am focus on Human Computer Interaction and interested in Front-End Development, Game Design, UI/UX Design and Data Analyst.
 								</h3>
 								<p>
-									For me, I especially want to convey interesting knowledge and solve human communication problems through all the media, like game and technology, so as to empower vulnerable groups to express themselves and receive knowledge.
+									For me, I especially want to convey interesting knowledge and solve human communication problems through all the media, like website, game and technology, so as to empower vulnerable groups to express themselves and receive knowledge.
 									<br>
 									I hope I can have chances to explore the possibilities of innovative technology and design a touching game to let people have confidence to break through the existing framework and create their own dreams and future.
 								</p>
@@ -316,17 +316,61 @@
 
 				<!-- Tab links -->
 				<div class="tab">
-					<button class="tablinks active" onclick="portfolioCategory(event, 'uiux')">UI/UX</button>
+					<button class="tablinks active" onclick="portfolioCategory(event, 'frontend')">Full Stack</button>
+					<button class="tablinks" onclick="portfolioCategory(event, 'uiux')">UI/UX</button>
 					<button class="tablinks" onclick="portfolioCategory(event, 'game')">Game/VR/AR</button>
 					<button class="tablinks" onclick="portfolioCategory(event, 'data')">Data</button>
 					<button class="tablinks" onclick="portfolioCategory(event, 'anim')">Animation</button>
-					<button class="tablinks" onclick="portfolioCategory(event, 'article')">Articles</button>
+					<!-- <button class="tablinks" onclick="portfolioCategory(event, 'article')">Articles</button> -->
 					
 				</div>
 
 				<div class="container">
 					<div class="portfolio-content">
 						<div class="isotope">
+
+							<div class="row tabcontent" id="frontend"> <!--Front-end-->
+								<!-- <h3> Front end</h3> -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<img src="img/portfolio/f2_crowdsourcing.png" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="https://yuan00611.github.io/Crowdsourcing-Final-Project/">
+												<h4>Crowdsourcing Test for Image Caption</h3>
+												
+												<h5> It is a crowdsorcing test websit for workers to mark important element. We hope to gain these data from AMT platform to facilitate machine learning for blindness. </h5>
+
+												<p> HTML, CSS, JavaScript, jQuery, AMT API, Node.js</p>
+
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<img src="img/portfolio/f1_elderlyweb.png" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<button type="button" data-toggle="modal" data-target="#elderWeb">
+												<h4>Eldercare Smart Home Collaboration Website</h3>
+												
+												<h5> This is the website I built by Laravel for interior designers and customers to communicate with each other. </h5>
+
+												<p> HTML, CSS, JavaScript, jQuery, Laravel, MySQL</p>
+											</button>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									
+								</div><!-- /.col -->
+
+							</div><!-- /.row -->
+
 							<div class="row tabcontent" id="game"> <!-- Games -->
 								<!-- <h3> Games</h3> -->
 
@@ -334,15 +378,35 @@
 									<div class="item">
 										<img src="img/portfolio/g5_vangogh.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<button type="button" data-toggle="modal" data-target="#vangogh"> VR Game</button>
+											<!-- <a href="Gameportfolio_vangogh.html"> -->
+											<button type="button" data-toggle="modal" data-target="#vangogh">
+												<h4>Is Vincent alright?</h3>
+												
+												<h5> This is a VR escape game. We designed the game based on VanGogh's story. We hope to let players understand more background knowledge about this remarkable person.
+												</h5>
+
+												<p> Vritual Reality, Room Escape Game</p>
+											</button>
+
+											<!-- </a> -->
+											
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
 										<img src="img/portfolio/g2_chicken.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
+											<!-- <a href="Gameportfolio_chicken.html"> -->
 											<button type="button" data-toggle="modal" data-target="#chicken">
-												AR Game
+												<h4>Rooster and Egg Game</h3>
+												
+												<h5> This is a serious game talking about the knowledge of rooster and eggs. We thought about how AR technology can help the museum exhibition to interact more closely with the audience.
+												</h5>
+
+												<p> Augmented Reality, Serious Game Design, Museum Exhibition with Technology</p>
+
 											</button>
+											<!-- </a> -->
+											
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
@@ -351,15 +415,33 @@
 									<div class="item">
 										<img src="img/portfolio/g4_windturbine.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
+											<!-- <a href="Gameportfolio_windturbine.html"> -->
 											<button type="button" data-toggle="modal" data-target="#wind">
-												VR Game
+												<h4>Interactive VR News of Offshore Wind Turbine</h3>
+												
+												<h5> This is a VR news game talking about the offshore wind turbines, which is a very hot topic in Taiwan. We hoped to use VR to explore the pros and cons of the whole issue from a first-person perspective. 
+												</h5>
+
+												<p> Virtual Reality, Interactive VR News, Offshore Wind Turbine</p>
 											</button>
+											<!-- </a> -->
+											
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
 										<img src="img/portfolio/g1_hnd.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<button type="button" data-toggle="modal" data-target="#hnd"> PC Game</button>
+											<!-- <a href="Gameportfolio_hnd.html"> -->
+											<button type="button" data-toggle="modal" data-target="#hnd">
+												<h4>Human and Dog</h3>
+												
+												<h5> This is a cooperative escape game. Each of them has asymmetric advantages that can be utilized to solve certain tasks and communicates with each other through unequal communicative capabilities.
+												</h5>
+
+												<p> PC Game, Cooperative Escape Game</p>
+											</button>
+											<!-- </a> -->
+											
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
@@ -368,7 +450,17 @@
 									<div class="item">
 										<img src="img/portfolio/g3_liberary.png" alt="portfolio image"/>
 										<div class="isotope-overlay">
-											<button type="button" data-toggle="modal" data-target="#lib"> PC Game</button>
+											<!-- <a href="Gameportfolio_liberary.html"> -->
+											<button type="button" data-toggle="modal" data-target="#lib">
+												<h4>Liberary</h3>
+												
+												<h5> This is a RPG game talking about Intellectual Freedom. We hope players to understand the core value of library thorough the game.
+												</h5>
+
+												<p> PC Game, Intellectual Freedom</p>
+											</button>
+											<!-- </a> -->
+											
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									
@@ -422,7 +514,7 @@
 												
 												<h5> Based on the "Smart Home Design Guide for Eldercare", I build a virtual reality prototype for elderly to experience and evaluate.</h5>
 
-												<p> Participatory Design, Focus Group, KANO analysis, Vritual Reality</p>
+												<p> Journey Map, Service Blueprint, Participatory Design, Focus Group, KANO analysis, Vritual Reality</p>
 
 											</a>
 											<!--<button type="button" data-toggle="modal" data-target="#app">
@@ -888,6 +980,40 @@
 			
         </footer><!--/.footer-copyright-->
 		<!--footer-copyright end-->
+
+
+<!--portfolio front-end modal-->
+<!--portfolio elderWeb modal-->
+<div id="elderWeb" class="modal fade"  tabindex="-1" aria-hidden="true" data-keyboard="true">
+	<div class="modal-dialog modal-lg" style= "width:800px">
+    	<div class="modal-content">
+    		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">
+          			<span>&times;</span>
+        		</button>
+        		<div class="modal-title">
+          			Eldercare Smart Home Collaboration Website
+        		</div>
+      		</div>
+
+      		<div class="modal-body" >
+      			<h3>Description</h3>
+      			<p>
+      				This is the website I built by Laravel for interior designers and customers to communicate with each other.
+      			</p>
+        		
+      			<a href="https://github.com/yuan00611/ElderlySmartHomeCollaborationTool" target="_blank">Github</a>
+
+        		<br>
+        		<iframe width="640" height="360" src="https://www.youtube.com/embed/zbuO-X-09t8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      		</div>
+
+      		<!--<div class="modal-footer"></div>-->
+    	</div>
+  	</div>
+</div>
+
 
 <!--portfolio game modal-->
 <!--portfolio vangogh modal-->
