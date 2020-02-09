@@ -13,3 +13,9 @@ $(window).bind('scroll', function() {
     }
   })
 }); 
+
+
+$('.poimg').click(function(){
+  $(this).toggleClass('pmin');
+  $(this).toggleClass('pmax');
+});
