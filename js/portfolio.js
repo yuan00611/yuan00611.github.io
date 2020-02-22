@@ -1,3 +1,6 @@
+$(document).ready(function(){
+  "use strict";
+
 
 //scroll spy
 var $window = $(window);
@@ -20,3 +23,5 @@ $('.poimg').click(function(){
   $(this).toggleClass('pmin');
   $(this).toggleClass('pmax');
 });
+
+}); 
