@@ -1,6 +1,3 @@
-$(document).ready(function(){
-  "use strict";
-
 $('.pimg').click(function(){
 	$(this).toggleClass('min');
 	$(this).toggleClass('max');
@@ -25,7 +22,5 @@ function portfolioCategory(evt, categoryName){
   	document.getElementById(categoryName).style.display = "block";
   		evt.currentTarget.className += " active";
 	
-
 }
 
-}); 
