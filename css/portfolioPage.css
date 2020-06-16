@@ -1,5 +1,5 @@
 h3{
-	text-align: center;
+	/*text-align: center;*/
 	padding: 20px;
 	color: #676a81;
 }
@@ -10,40 +10,7 @@ a{
     -ms-transition: 0.3s linear; 
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
-}
-
-a:hover{
-	color: #51d2ff;
-}
-
-.active > a{
-	padding-left: 4px;
-	color: #51d2ff;
-}
-
-#outline{
-	float: left;
-	position: fixed;
-	margin-top: -400px;
-	margin-left: 40px;
-}
-
-.ppage{
-	margin-top: 100px;
-
-}
-
-.highlight{
-	display: flex;
-	justify-content: center;
-	margin-top: -10px;
-	margin-bottom: -100px;
-}
-
-.highlightC{
-	margin: 80px;
-	text-align: center;
-
+    font-family: 'Poppins', sans-serif !important;
 }
 
 i{
@@ -52,10 +19,138 @@ i{
 	color: #424242;
 }
 
+/*-------------------------------------
+        Portfolio page styles
+--------------------------------------*/
+
+.portfolio {
+    padding:  50px 20px 100px;
+    border:  1px solid #e5ebf2;
+    /*text-align: center;*/
+}
+
+/*-------------------------------------
+        Header
+--------------------------------------*/
+.section-heading h2 {
+	color: #5884C6;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 95px;
+    border-bottom: 1px solid #e5ebf2;
+    margin-left: 5vw;
+    margin-right: 2vw;
+}
+
+#time {
+	margin-top: -82px;
+	font-size: 18px;
+	
+}
+
+#keyword {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: #888;
+}
+
+/*-------------------------------------
+        Summary & Highlight
+--------------------------------------*/
+
+.ppage{
+	margin-top: 100px;
+}
+
+.highlight{
+	margin-left: 6vw;
+	text-align: left;
+	/*margin-top: -10px;*/
+}
+
+@media screen and (max-width:992px) {
+	.highlight{
+		margin-left: 10vw;
+	}
+}
+
+.highlight h3 {
+	text-align: left;
+	font-size: 2.2rem;
+	color: #5884C6;
+}
+
+.highlight p {
+	margin-left: 3vw;
+	margin-right: 1vw;
+}
+
+.highlightC{
+	margin: 2vw;
+}
+
+.highlight-img {
+	margin-top: 3vw;
+	margin-right: 7vw;
+	margin-bottom: 3vw;
+}
+@media screen and (max-width:1200px) {
+	.highlight-img{
+		margin-left: 3vw;
+	}
+}
+
+.method ul, .method li, .role  ul, .role  li {
+	margin-left: 3vw;
+	margin-right: 1vw;
+	color:#43485c;
+	font-size:14px;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------------------------
+        Outline
+--------------------------------------*/
+
+a:hover{
+	color: #5884C6;
+}
+
+.active > a{
+	padding-left: 4px;
+	color: #5884C6;
+}
+
+#outline{
+	padding-left: 0px ;
+	background-color: #efefef;
+	float: left;
+	position: fixed;
+	margin-left: 1vw;
+	margin-top: 100px;
+	border-radius: 5px;
+}
+
+@media screen and (max-width:768px) {
+	#outline{
+		margin-left: 0;
+	}
+	#outline a {
+		font-size: 8px;
+	}
+}
+
+
+/*-------------------------------------
+        Main Content
+--------------------------------------*/
+
 .describe{
 	padding-top: 30px;
-	margin-left: 200px;
-	margin-right: 180px;
+	margin-left: 15vw;
+	margin-right: 10vw;
 }
 
 .describe > h2,img{
@@ -82,6 +177,10 @@ i{
 
 }
 
+/*-------------------------------------
+        Other Page Button
+--------------------------------------*/
+
 #previous{
 	float: left;
 	margin-left: 150px;
@@ -92,6 +191,9 @@ i{
 	margin-right: 150px;
 }
 
+/*-------------------------------------
+        Click Picture for enlarge 
+--------------------------------------*/
 
 .pmax{width:80%;height:auto; cursor: pointer;}
 .pmin{width:200px;height:auto; cursor: pointer;}
