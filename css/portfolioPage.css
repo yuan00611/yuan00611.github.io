@@ -19,6 +19,11 @@ i{
 	color: #424242;
 }
 
+img {
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+}
+
 /*-------------------------------------
         Portfolio page styles
 --------------------------------------*/
@@ -70,9 +75,22 @@ i{
 	/*margin-top: -10px;*/
 }
 
+
+.highlight .row {
+	display: flex;
+	align-items: center;
+}
+
 @media screen and (max-width:992px) {
 	.highlight{
 		margin-left: 10vw;
+	}
+	
+}
+
+@media screen and (max-width:1200px) {
+	.highlight .row {
+		display: block;
 	}
 }
 
@@ -183,6 +201,20 @@ a:hover{
 	color:#43485c;
 	font-size:14px;
 	font-family: 'Poppins', sans-serif;
+}
+
+.describe .row {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin-right: 5vw; 
+	
+}
+
+@media screen and (max-width:992px) {
+	.describe .row {
+		display: block;
+	}
 }
 
 
