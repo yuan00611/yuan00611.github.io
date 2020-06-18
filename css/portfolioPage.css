@@ -21,7 +21,7 @@ i{
 
 img {
 	margin-top: 3vh;
-	margin-bottom: 3vh;
+	margin-bottom: 1vh;
 }
 
 /*-------------------------------------
@@ -78,7 +78,7 @@ img {
 
 .highlight > .row-summary {
 	display: flex;
-	align-items: center;
+	/*align-items: center;*/
 }
 
 @media screen and (max-width:992px) {
@@ -110,9 +110,9 @@ img {
 }
 
 .highlight-img {
-	margin-top: 3vw;
+	/*margin-top: 3vw;*/
 	margin-right: 7vw;
-	margin-bottom: 3vw;
+	/*margin-bottom: 3vw;*/
 }
 @media screen and (max-width:1200px) {
 	.highlight-img{
