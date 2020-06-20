@@ -20,8 +20,8 @@ i{
 }
 
 img {
-	margin-top: 3vh;
-	margin-bottom: 1vh;
+	/*margin-top: 3vh;*/
+	margin-bottom: 3vh;
 }
 
 /*-------------------------------------
@@ -39,7 +39,7 @@ img {
 --------------------------------------*/
 .section-heading h2 {
 	color: #5884C6;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 95px;
@@ -64,6 +64,22 @@ img {
 /*-------------------------------------
         Summary & Highlight
 --------------------------------------*/
+
+.heading h3 {
+	text-align: center;
+	color: #5884C6;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.summary p {
+	font-size: 1.5rem;
+}
 
 .ppage{
 	margin-top: 100px;
@@ -95,6 +111,7 @@ img {
 }
 
 .highlight h3 {
+	margin-top: 3vh;
 	text-align: left;
 	font-size: 2.2rem;
 	color: #5884C6;
@@ -177,9 +194,15 @@ a:hover{
 }
 
 .describe h2{
-	margin-bottom: 20px;
-	font-size: 23px;
+	text-align: center;
 	color: #5884C6;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    /*margin-top: 5vh;*/
+    margin-bottom: 8vh;
 }
 
 .describe h3{
