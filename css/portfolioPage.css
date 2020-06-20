@@ -1,6 +1,6 @@
 h3{
 	/*text-align: center;*/
-	padding: 20px;
+	/*padding: 20px;*/
 	color: #676a81;
 }
 
@@ -206,19 +206,25 @@ a:hover{
 }
 
 .describe h3{
+	padding: 10px 0px;
 	text-align: left;
-	margin-left: -20px;
-	font-size: 18px;
-	margin-top: -20px;
+	font-size: 22px;
+	margin-top: 5vh;
+    /*margin-bottom: 2vh;*/
 	color: #5884C6;
 
 }
-/*
-.describe p{
-	text-align: left;
-	font-size: 14px;
-	margin-bottom: 15px;
-}*/
+
+.describe h4 {
+	/*margin-left: 1.8vw;*/
+	font-size: 19px;
+	color: #9292a0;
+}
+
+.describe h5 {
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
 
 .describe li{
 	color:#43485c;
@@ -227,11 +233,13 @@ a:hover{
 }
 
 .describe .row {
+	margin-right: 5vw; 	
+}
+
+.align-items-center {
 	display: flex;
 	align-items: center;
-	/*text-align: center;*/
-	margin-right: 5vw; 
-	
+	text-align: center;
 }
 
 @media screen and (max-width:992px) {
