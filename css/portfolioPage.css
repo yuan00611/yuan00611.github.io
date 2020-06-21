@@ -247,10 +247,21 @@ a:hover{
 	text-align: center;
 }
 
+.paragraph {
+	text-align: left;
+	/*max-width: 450px;*/
+}
+
+.paragraph span {
+	font-weight: 600;
+}
+
+
 @media screen and (max-width:992px) {
 	.describe .row {
 		display: block;
 	}
+
 }
 
 .topic {
