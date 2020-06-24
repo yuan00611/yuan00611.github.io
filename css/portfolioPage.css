@@ -1,3 +1,19 @@
+html {
+	font-size: 12px;
+}
+
+@media screen and (max-width:768px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width:540px) {
+	html {
+		font-size: 10px;
+	}
+}
+
 h3{
 	/*text-align: center;*/
 	/*padding: 20px;*/
@@ -44,7 +60,7 @@ iframe {
 --------------------------------------*/
 .section-heading h2 {
 	color: #5884C6;
-    font-size: 30px;
+    font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 95px;
@@ -55,14 +71,14 @@ iframe {
 
 #time {
 	margin-top: -82px;
-	font-size: 18px;
+	font-size: 1.5rem;
 	
 }
 
 #keyword {
 	margin-top: 5px;
 	margin-bottom: 10px;
-	font-size: 15px;
+	font-size: 1.3rem;
 	color: #888;
 }
 
@@ -73,7 +89,7 @@ iframe {
 .heading h3 {
 	text-align: center;
 	color: #5884C6;
-    font-size: 26px;
+    font-size: 2.2rem;
     font-weight: 600;
     text-transform: uppercase;
     /*margin-left: 5vw;*/
@@ -83,7 +99,7 @@ iframe {
 }
 
 .summary p {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .ppage{
@@ -91,7 +107,7 @@ iframe {
 }
 
 .highlight{
-	margin-left: 6vw;
+	/*margin-left: 6vw;*/
 	text-align: left;
 	/*margin-top: -10px;*/
 }
@@ -116,9 +132,10 @@ iframe {
 }
 
 .highlight h3 {
+	margin-left: 3vw;
 	margin-top: 3vh;
 	text-align: left;
-	font-size: 2.2rem;
+	font-size: 2rem;
 	color: #5884C6;
 }
 
@@ -133,7 +150,7 @@ iframe {
 
 .highlight-img {
 	/*margin-top: 3vw;*/
-	margin-right: 7vw;
+	/*margin-right: 7vw;*/
 	/*margin-bottom: 3vw;*/
 }
 @media screen and (max-width:1200px) {
@@ -146,7 +163,7 @@ iframe {
 	margin-left: 3vw;
 	margin-right: 1vw;
 	color:#43485c;
-	font-size:14px;
+	font-size: 1.2rem;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -159,19 +176,34 @@ a:hover{
 }
 
 .active > a{
-	padding-left: 4px;
+	padding-left: 2px;
 	color: #5884C6;
 }
 
+.active > a::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #5884C6; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  /*margin-left: -1.3em;  Also needed for space (tweak if needed) */
+}
+
+
 #outline{
 	padding-left: 0px ;
-	background-color: #efefef;
+	/*background-color: #efefef;*/
 	float: left;
 	position: fixed;
 	margin-left: 1vw;
 	margin-top: 100px;
 	border-radius: 5px;
 }
+
+.o{
+	list-style: none;
+}
+
 
 @media screen and (max-width:768px) {
 	#outline{
@@ -187,21 +219,21 @@ a:hover{
         Main Content
 --------------------------------------*/
 
-.describe{
+.contentPart{
 	padding-top: 4vh;
 	padding-left: 11vw;
 	padding-right: 10vw;
 }
 
-.describe > h2,img{
+.contentPart > h2,img{
 	text-align: center;
 	
 }
 
-.describe h2{
+.contentPart h2{
 	text-align: center;
 	color: #5884C6;
-    font-size: 26px;
+    font-size: 2.2rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-left: 1vw;
@@ -210,34 +242,35 @@ a:hover{
     margin-bottom: 8vh;
 }
 
-.describe h3{
+.contentPart h3{
 	padding: 10px 0px;
 	text-align: left;
-	font-size: 22px;
+	font-size: 2rem;
 	margin-top: 5vh;
     /*margin-bottom: 2vh;*/
 	color: #5884C6;
 
 }
 
-.describe h4 {
+.contentPart h4 {
 	/*margin-left: 1.8vw;*/
-	font-size: 19px;
+	font-size: 1.7rem;
 	color: #9292a0;
 }
 
-.describe h5 {
+.contentPart h5 {
 	margin-top: 2vh;
 	margin-bottom: 2vh;
+	font-size: 1.4rem;
 }
 
-.describe li{
+.contentPart li{
 	color:#43485c;
-	font-size:14px;
+	font-size: 1.2rem;
 	font-family: 'Poppins', sans-serif;
 }
 
-.describe .row {
+.contentPart .row {
 	margin-right: 5vw; 	
 }
 
@@ -258,7 +291,7 @@ a:hover{
 
 
 @media screen and (max-width:992px) {
-	.describe .row {
+	.contentPart .row {
 		display: block;
 	}
 
