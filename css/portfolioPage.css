@@ -20,11 +20,6 @@ html {
 	}
 }
 
-h3{
-	/*text-align: center;*/
-	/*padding: 20px;*/
-	color: #676a81;
-}
 
 a{
 	-webkit-transition: 0.3s linear; 
@@ -65,14 +60,15 @@ iframe {
         Header
 --------------------------------------*/
 .section-heading h2 {
-	color: #5884C6;
+	color: #2B5F98;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 95px;
     border-bottom: 1px solid #e5ebf2;
     margin-left: 5vw;
     margin-right: 2vw;
+    font-family: 'Playfair Display', serif;
 }
 
 #time {
@@ -85,7 +81,7 @@ iframe {
 	margin-top: 5px;
 	margin-bottom: 10px;
 	font-size: 1.3rem;
-	color: #888;
+	color: #DEAE97;
 }
 
 /*-------------------------------------
@@ -94,14 +90,14 @@ iframe {
 
 .heading h3 {
 	text-align: center;
-	color: #5884C6;
+	color: #2B5F98;
     font-size: 2.2rem;
     font-weight: 600;
     text-transform: uppercase;
-    /*margin-left: 5vw;*/
     margin-right: 2vw;
     margin-top: 5vh;
     margin-bottom: 3vh;
+    font-family: 'Playfair Display', serif;
 }
 
 .summary p {
@@ -141,8 +137,9 @@ iframe {
 	margin-left: 3vw;
 	margin-top: 3vh;
 	text-align: left;
-	font-size: 2rem;
-	color: #5884C6;
+	font-size: 1.8rem;
+	color: #2B5F98;
+	font-family: 'Playfair Display', serif;
 }
 
 .highlight p {
@@ -178,17 +175,17 @@ iframe {
 --------------------------------------*/
 
 a:hover{
-	color: #5884C6;
+	color: #2B5F98;
 }
 
 .active > a{
 	padding-left: 2px;
-	color: #5884C6;
+	color: #2B5F98;
 }
 
 .active > a::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #5884C6; /* Change the color */
+  color: #2B5F98; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
@@ -238,7 +235,8 @@ a:hover{
 
 .contentPart h2{
 	text-align: center;
-	color: #5884C6;
+	color: #2B5F98;
+	font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -254,20 +252,22 @@ a:hover{
 	font-size: 2rem;
 	margin-top: 5vh;
     /*margin-bottom: 2vh;*/
-	color: #5884C6;
-
+	color: #2B5F98;
+	font-family: 'Playfair Display', serif;
 }
 
 .contentPart h4 {
 	/*margin-left: 1.8vw;*/
 	font-size: 1.7rem;
 	color: #9292a0;
+	font-family: 'Playfair Display', serif;
 }
 
 .contentPart h5 {
 	margin-top: 2vh;
 	margin-bottom: 2vh;
 	font-size: 1.4rem;
+	font-family: 'Playfair Display', serif;
 }
 
 .contentPart li{
@@ -330,14 +330,14 @@ a:hover{
 #Challenge p {
 	/*font-family: 'Helvetica';*/
 	color: #555562;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	margin: 1vh 10vw 5vh 10vw;
 	font-weight: 500;
 }
 
 #Challenge span {
-	color: #f15025;
-	font-size: 2.1rem;
+	color: #DEAE97;
+	font-size: 1.7rem;
 	font-weight: 600;
 }
 
