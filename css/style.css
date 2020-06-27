@@ -759,9 +759,6 @@ span.single-timeline-horizontal {
     text-align: center;
 }
 
-.modal{
-
-}
 
 .isotope-overlay button {
     display: inline-block;
@@ -787,7 +784,7 @@ span.single-timeline-horizontal {
 
 
 .modal{
-    margin-top: 200px;
+    /*margin-top: 200px;*/
 }
 
 .modal-body a{

@@ -21,32 +21,32 @@
 		
        
         <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
 
 		<!--flat icon css-->
-		<link rel="stylesheet" href="css/flaticon.css">
+		<link rel="stylesheet" href="../../css/flaticon.css">
 
 		<!--animate.css-->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="../../css/animate.css">
 
         <!--owl.carousel.css-->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../../css/owl.theme.default.min.css">
 		
         <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
 		
 		<!-- bootsnav -->
-		<link rel="stylesheet" href="css/bootsnav.css" >	
+		<link rel="stylesheet" href="../../css/bootsnav.css" >	
         
         <!--style.css-->
-        <link rel="stylesheet" href="css/style.css">
-
-        <!--portfolioPage.css-->
-        <link rel="stylesheet" href="css/portfolioPage.css">
+        <link rel="stylesheet" href="../../css/style.css">
         
         <!--responsive.css-->
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="../../css/responsive.css">
+
+        <!--portfolioPage.css-->
+        <link rel="stylesheet" href="u07_smarthome.css">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	</head>
@@ -127,7 +127,7 @@
 					</div>
 					<div class="col-md-7">
 						<div class="highlight-img">
-							<img src="img/portfolio/u7_summary01.png">
+							<img src="img/u7_summary01.png">
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,7 @@
 					</div>
 					<div class="col-md-7">
 						<div class="highlight-img">
-							<img src="img/portfolio/u7_summary02.png">
+							<img src="img/u7_summary02.png">
 						</div>
 					</div>
 				</div>
@@ -214,7 +214,7 @@
 				<p style="margin-top: -30px;">At the same time, smart home seems to be a appropriate solution to solve this problem. However, will the elderly accept it? </p>
 				<!-- According to the UN World Population Ageing Report in 2013, they projected the senior population would reach <span>21 percent</span>  of the world population, which included <span>2.1 billion</span>  people aged over 60. -->
 				<div style="text-align: center;">
-					<img style="max-height: 300px;" src="img/portfolio/u7_challenge.png">
+					<img style="max-height: 300px;" src="img/u7_challenge.png">
 				</div>
 				<!-- <h3>Will Ambient Assisted Living(AAL) truly helpful for the elderly?</h3>
 				<li>What is their view of IoT technology? Do they want to accept it or not?</li>
@@ -227,14 +227,28 @@
 			<h2>Solution</h2>
 			<p>To tackle these challenges, we decided to use <span> VR Smart Home Service Simulation </span> for the elderly due to its unique immersive experience.</p>
 			<div style="text-align: center;">
-				<img style="max-height: 300px;" src="img/portfolio/u7_solution02.gif">
+				<img style="max-height: 300px;" src="img/u7_solution02.gif">
 			</div>
 		</section>
 
 		<section class="describe contentPart" id="Process">
 			<div>
 				<h2>Project Process</h2>
-				<img src="img/portfolio/u7_process.png">
+				<img class="zoom_img" src="img/u7_process.png" onclick="zoom_in(0)">
+
+				<!-- The Modal -->
+				<div class="modal zoom_modal">
+
+				  <!-- The Close Button -->
+				  <span class="close" onclick="close_zoom(0)">&times;</span>
+
+				  <!-- Modal Content (The Image) -->
+				  <img class="modal-content zoom_modal_img" >
+
+				  <!-- Modal Caption (Image Text) -->
+				  <div class="zoom_caption">Project Process</div>
+				</div>
+
 			</div>
 			<hr>
 			<div>
@@ -251,7 +265,7 @@
 							<li>We realized what is their pain and gain toward the fall issue.</li>
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_preliminary01.png">
+							<img style="max-height: 300px;" src="img/u7_preliminary01.png">
 						</div>
 					</div>
 				</div>
@@ -259,11 +273,39 @@
 					<div class="row">
 						<div class="col-md-6 topic">
 							<h5>Empathy Map</h5>
-							<img style="max-height: 280px;" src="img/portfolio/u7_empathy_map.png">
+							<img style="max-height: 280px;" src="img/u7_empathy_map.png" class="zoom_img" onclick="zoom_in(1)">
+
+							<!-- The Modal -->
+							<div class="modal zoom_modal">
+
+							  <!-- The Close Button -->
+							  <span class="close" onclick="close_zoom(1)">&times;</span>
+
+							  <!-- Modal Content (The Image) -->
+							  <img class="modal-content zoom_modal_img" >
+
+							  <!-- Modal Caption (Image Text) -->
+							  <div class="zoom_caption">Empathy Map</div>
+							</div>
+							
 						</div>
 						<div class="col-md-6 topic">
 							<h5>Journey Map</h5>
-							<img src="img/portfolio/u7_journey_map.png">
+							<img style="max-height: 280px;" src="img/u7_journey_map.png" class="zoom_img" onclick="zoom_in(2)">
+
+							<!-- The Modal -->
+							<div class="modal zoom_modal">
+
+							  <!-- The Close Button -->
+							  <span class="close" onclick="close_zoom(2)">&times;</span>
+
+							  <!-- Modal Content (The Image) -->
+							  <img class="modal-content zoom_modal_img" >
+
+							  <!-- Modal Caption (Image Text) -->
+							  <div class="zoom_caption">Journey Map</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -281,7 +323,7 @@
 							<li>We learned how to design a user-centered technology environment for seniors with the detail of technology installation and ergonomics. </li>
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_preliminary02.png">
+							<img style="max-height: 300px;" src="img/u7_preliminary02.png">
 						</div>
 					</div>
 				</div>
@@ -289,11 +331,11 @@
 					<div class="row">
 						<div class="col-md-6 topic">
 							<h5>Smart Home Technology</h5>
-							<img style="max-height: 280px;" src="img/portfolio/u7_smart_home_tech.png">
+							<img style="max-height: 280px;" src="img/u7_smart_home_tech.png">
 						</div>
 						<div class="col-md-6 topic">
 							<h5>Interior Design for Technology</h5>
-							<img style="max-height: 280px;" src="img/portfolio/u7_interior_design.png">
+							<img style="max-height: 280px;" src="img/u7_interior_design.png">
 						</div>
 					</div>
 				</div>
@@ -313,7 +355,21 @@
 						</div>
 						<div class="col-md-6 topic">
 							<h5>Scenario</h5>
-							<img src="img/portfolio/u7_VR_scenario.png">
+							<img style="max-height: 280px;" src="img/u7_VR_scenario.png" class="zoom_img" onclick="zoom_in(3)">
+
+							<!-- The Modal -->
+							<div class="modal zoom_modal">
+
+							  <!-- The Close Button -->
+							  <span class="close" onclick="close_zoom(3)">&times;</span>
+
+							  <!-- Modal Content (The Image) -->
+							  <img class="modal-content zoom_modal_img" >
+
+							  <!-- Modal Caption (Image Text) -->
+							  <div class="zoom_caption">Scenario</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -322,11 +378,39 @@
 						
 						<div class="col-md-6 topic">
 							<h5>Technology can solve pain point</h5>
-							<img style="max-height: 280px;" src="img/portfolio/u7_pain_tech.png">
+							<img style="max-height: 280px;" src="img/u7_pain_tech.png" class="zoom_img" onclick="zoom_in(4)">
+
+							<!-- The Modal -->
+							<div class="modal zoom_modal">
+
+							  <!-- The Close Button -->
+							  <span class="close" onclick="close_zoom(4)">&times;</span>
+
+							  <!-- Modal Content (The Image) -->
+							  <img class="modal-content zoom_modal_img" >
+
+							  <!-- Modal Caption (Image Text) -->
+							  <div class="zoom_caption">Technology can solve pain point</div>
+							</div>
+							
 						</div>
 						<div class="col-md-6 topic">
 							<h5>Service Blueprint</h5>
-							<img style="max-height: 280px;" src="img/portfolio/u7_service_blueprint.png">
+							<img style="max-height: 280px;" src="img/u7_service_blueprint.png" class="zoom_img" onclick="zoom_in(5)">
+
+							<!-- The Modal -->
+							<div class="modal zoom_modal">
+
+							  <!-- The Close Button -->
+							  <span class="close" onclick="close_zoom(5)">&times;</span>
+
+							  <!-- Modal Content (The Image) -->
+							  <img class="modal-content zoom_modal_img" >
+
+							  <!-- Modal Caption (Image Text) -->
+							  <div class="zoom_caption">Service Blueprint</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -347,7 +431,7 @@
 					<div class="row">
 						<div class="col-md-6 topic">
 							<h5>Smart Home Modeling</h5>
-							<img style="max-height: 185px;" src="img/portfolio/u7_3D_modeling.png">
+							<img style="max-height: 185px;" src="img/u7_3D_modeling.png">
 						</div>
 						<div class="col-md-6 topic">
 							<h5>VR Environment Building</h5>
@@ -357,31 +441,31 @@
 							  <!-- Full-width images with number and caption text -->
 							  <div class="mySlides ">
 							    <div class="numbertext">1 / 5</div>
-							    <img src="img/portfolio/u7_VR01.png">
+							    <img src="img/u7_VR01.png">
 							    <div class="text">Correspondence between virtual and real environment</div>
 							  </div>
 
 							  <div class="mySlides ">
 							    <div class="numbertext">2 / 5</div>
-							    <img src="img/portfolio/u7_VR02.png">
+							    <img src="img/u7_VR02.png">
 							    <div class="text">Smart Lighting System in bedroom and bathroom</div>
 							  </div>
 
 							  <div class="mySlides ">
 							    <div class="numbertext">3 / 5</div>
-							    <img src="img/portfolio/u7_VR03.png">
+							    <img src="img/u7_VR03.png">
 							    <div class="text">Detection zone for voice assistant(bathroom entrance, toilet, bed)</div>
 							  </div>
 
 							  <div class="mySlides">
 							    <div class="numbertext">4 / 5</div>
-							    <img src="img/portfolio/u7_VR05.png">
+							    <img src="img/u7_VR05.png">
 							    <div class="text">Smart Mat</div>
 							  </div>
 
 							  <div class="mySlides ">
 							    <div class="numbertext">5 / 5</div>
-							    <img src="img/portfolio/u7_VR04.png">
+							    <img src="img/u7_VR04.png">
 							    <div class="text">Emergency notification system detection zones</div>
 							  </div>
 
@@ -419,7 +503,7 @@
 							<p>We recruited 3 groups with 10 seniors in the end.</p>
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_recruit.png">
+							<img style="max-height: 300px;" src="img/u7_recruit.png">
 						</div>
 					</div>
 				</div>
@@ -428,17 +512,17 @@
 					<div class="row step_topic">
 						<div class="col-xs-4 ">
 							<h5>Step 1</h5>
-							<img class="step" src="img/portfolio/u7_step01.png">
+							<img class="step" src="img/u7_step01.png">
 							<p>Focus group interview with the topic of fall experience sharing</p>
 						</div>
 						<div class="col-xs-4">
 							<h5>Step 2</h5>
-							<img class="step" src="img/portfolio/u7_step02.png">
+							<img class="step" src="img/u7_step02.png">
 							<p>Experiencing the VR scenario</p>
 						</div>
 						<div class="col-xs-4">
 							<h5>Step 3</h5>
-							<img class="step" src="img/portfolio/u7_step03.png">
+							<img class="step" src="img/u7_step03.png">
 							<p>Focus group interview and participatory design with the topic of the smart home service they experienced before</p>		
 						</div>
 					</div>
@@ -464,7 +548,7 @@
 							
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_result01.png">
+							<img style="max-height: 300px;" src="img/u7_result01.png">
 						</div>
 					</div>
 				</div>
@@ -479,7 +563,7 @@
 
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_KANO.png">
+							<img style="max-height: 300px;" src="img/u7_KANO.png">
 						</div>
 					</div>
 				</div>
@@ -488,19 +572,19 @@
 					<div class="row step_topic">
 						<div class="col-xs-4 ">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key01.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key01.png">
 							<h5>Gender Difference</h5>
 							<p>Interestingly, we found that women are more open-minded with the help of new technology, but men are more think that technology help is unnecessary.</p>
 						</div>
 						<div class="col-xs-4">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key03.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key03.png">
 							<h5>Emergency alert make them relief</h5>
 							<p>All users appreciate the combination with the emergency notification system and smart mat, which can reduce injuries and notice their trusted family or friends immediately. </p>
 						</div>
 						<div class="col-xs-4">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key02.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key02.png">
 							<h5>Tolerance of Voice Assistant</h5>
 							<p>We used lots of voice assistant to notice seniors. However, some people thought it could be annoyed. How to design moderate notification is another topic, or we can use some music as an alternative.</p>		
 						</div>
@@ -518,7 +602,7 @@
 							<p>However, after having a conversation with seniors, we can assume that VR can be a potential solution for us to use in the future.</p>
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_result02.png">
+							<img style="max-height: 300px;" src="img/u7_result02.png">
 						</div>
 					</div>
 				</div>
@@ -527,19 +611,19 @@
 					<div class="row step_topic">
 						<div class="col-xs-4 ">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key04.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key04.png">
 							<h5>Communication</h5>
 							<p>With the complete service detail and dynamic adjustment, users think VR can be an excellent communication tool for smart home service design.</p>
 						</div>
 						<div class="col-xs-4">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key05.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key05.png">
 							<h5>Intuitive</h5>
 							<p>To design an application for seniors, we always need to keep in mind that it should be intuitive and simple to prevent them from mistakes and frustration.  </p>
 						</div>
 						<div class="col-xs-4">
 							
-							<img style="max-height: 110px;" class="step" src="img/portfolio/u7_key06.png">
+							<img style="max-height: 110px;" class="step" src="img/u7_key06.png">
 							<h5>Hardware decision</h5>
 							<p>Although some obstacles can't be solved right now, we can choose wireless, light, and thin devices to make them feel more comfortable. </p>		
 						</div>
@@ -563,7 +647,7 @@
 
 						</div>
 						<div class="col-md-6 topic">
-							<img style="max-height: 300px;" src="img/portfolio/u7_thesis.JPG">
+							<img style="max-height: 300px;" src="img/u7_thesis.JPG">
 						</div>
 					</div>
 				</div>
@@ -575,12 +659,14 @@
 						<div class="col-md-6 paragraph">
 							<ol>
 								<li> <span>Inclusive Design: </span> In the process, some participants mentioned that the current service designed for the healthy elderly. Still, we should consider the needs of the elderly who are invisible or inaudible. More careful and comprehensive, such as using text narration, vibration and light reminders, etc., can be regarded as ways to replace the voice. </li>
+								<br>
 								<li><span>Repair process design: </span> The most distinctive feature of smart technology is the need to connect to the network and electricity. Therefore, many users also asked whether there will be a notification if the machine fails in the future. Otherwise, if they rely too much on technology, if devices are broken or have no electricity, seniors will be anxious about whether there will be any accidents, so the countermeasures for technological failures also need to be planned in the future.s</li>
+								<br>
 								<li> <span> Considering age and degree of physical degradation: </span> Some users suggested that it should be more detailed to analyze each age group's physiological degradation and give different intelligent technology auxiliary services. They think that the demand for smart technology will decrease with age. Because smart technology may not solve the problems faced by the older generation but from many interior design improvements, such as installing armrests or removing dangerous places with sharp corners.</li>
 							</ol>
 						</div>
 						<div class="col-md-6 ">
-							<img style="max-height: 300px;" src="img/portfolio/u7_solution01.gif">
+							<img style="max-height: 300px;" src="img/u7_solution01.gif">
 						</div>
 					</div>
 				</div>
@@ -622,38 +708,38 @@
         </footer><!--/.footer-copyright-->
 		<!--footer-copyright end-->
 
-		<script src="js/jquery.js"></script>
+		<script src="../../js/jquery.js"></script>
         
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		
 		<!--bootstrap.min.js-->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
 		
 		<!-- bootsnav js -->
-		<script src="js/bootsnav.js"></script>
+		<script src="../../js/bootsnav.js"></script>
 		
 		<!-- jquery.sticky.js -->
-		<script src="js/jquery.sticky.js"></script>
+		<script src="../../js/jquery.sticky.js"></script>
 		
 		<!-- for progress bar start-->
 
 		<!-- progressbar js -->
-		<script src="js/progressbar.js"></script>
+		<script src="../../js/progressbar.js"></script>
 
 		<!-- appear js -->
-		<script src="js/jquery.appear.js"></script>
+		<script src="../../js/jquery.appear.js"></script>
 
 		<!-- for progress bar end -->
 
 		<!--owl.carousel.js-->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="../../js/owl.carousel.min.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 
 		<!--Portfolio JS / scrollspy-->
-        <script src="js/portfolio.js"></script>
+        <script src="u07_smarthome.js"></script>
 
 
 	</body>
