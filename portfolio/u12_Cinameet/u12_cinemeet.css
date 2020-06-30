@@ -337,7 +337,7 @@ a:hover{
 	padding-left: 11vw;
 	padding-right: -10vw;
 	padding-bottom: 5vh;
-	background-color: #dcedff;
+	background-color: #e2d9ff;
 }
 
 .key h4 {
@@ -353,6 +353,14 @@ a:hover{
 .key h5 {
 	margin-top: -1vh;
 }
+
+@media screen and (max-width:675px){
+	#vlight {
+		/*max-height: 200px !important;*/
+	}
+}
+
+
 
 /*-------------------------------------
         Slideshow / Carousel
@@ -531,8 +539,9 @@ a:hover{
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  /*width: 80%;*/
+  max-width: 1000px;
+  max-height: 1000px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
