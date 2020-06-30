@@ -229,8 +229,7 @@ a:hover{
     font-size: 2.2rem;
     font-weight: 600;
     text-transform: capitalize;
-    margin-left: 1vw;
-    margin-right: 2vw;
+    margin-left: 3vw;
     margin-top: 5vh;
     margin-bottom: 8vh;
 }
@@ -379,15 +378,15 @@ a:hover{
   display: none;
 }
 
-.mySlides img {
+.mySlides img, .mySlides2 img {
 	/*width:100%; */
-	height: 180px;
+	height: 400px;
 }
 
-@media screen and (max-width:1200px){
-	.mySlides img {
+@media screen and (max-width:768px){
+	.mySlides img, .mySlides2 img {
 		/*width:100%; */
-		height: 150px;
+		height: 200px;
 	}
 }
 

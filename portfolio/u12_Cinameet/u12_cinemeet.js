@@ -19,7 +19,7 @@ $(window).bind('scroll', function() {
 // Slidewindow
 var slideIndex = 1;
 showSlides(slideIndex, "mySlides", "dot");
-// showSlides(slideIndex, "mySlides2", "dot2");
+showSlides(slideIndex, "mySlides2", "dot2");
 
 // Next/previous controls
 function plusSlides(n, SlideClassName, dotClassName) {
