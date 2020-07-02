@@ -734,7 +734,7 @@ span.single-timeline-horizontal {
 
     position:absolute;
     height:200px;
-    width:300px;
+    min-width:300px;
     background:rgba(31,44,108,.7);
     display:flex;
     align-items:center;
@@ -751,6 +751,12 @@ span.single-timeline-horizontal {
     -ms-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
+}
+
+@media screen and (min-width:1200px){
+    .isotope-overlay{
+        min-width:350px;
+    }
 }
 .isotope-overlay a {
     display: inline-block;
