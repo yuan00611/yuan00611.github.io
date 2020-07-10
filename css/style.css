@@ -191,10 +191,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../img/welcomebackground.jpg)no-repeat;
+    /*background:url(../img/welcomebackground.jpg)no-repeat;*/
+    background:url(../img/pic.jpg)no-repeat;
     background-size:cover;
     background-position: center;
-    height:890px;
+    height:800px;
 }
 .welcome-hero:before{
     position:absolute;
@@ -215,6 +216,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
     line-height: 1.5;
 }
 .header-text h2 span {color: #51d2ff;}
+
+.header-text h3 {
+    font-size: 30px;
+    color: #51d2ff;
+    text-transform: capitalize;
+    line-height: 1.3;
+}
+
 .header-text p {
     color: #fff;
     font-size: 20px;
@@ -801,6 +810,19 @@ span.single-timeline-horizontal {
 .modal-body a:hover{
     color: #16c3ff;
 }
+
+.first-item{
+        margin-top: 0px;
+    }
+
+@media screen and (max-width:768px){
+    .first-item{
+        margin-top: 100px !important;
+    }
+}
+
+
+
 
 /*-------------------------------------
         10.  Publication
