@@ -167,20 +167,11 @@ a:hover{
 	color: #5625FF;
 }
 
-.active > a{
-	padding-left: 2px;
+.o p {
+	font-size: 1.3rem;
 	color: #5625FF;
+	font-weight: 700;
 }
-
-.active > a::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #5625FF; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  /*margin-left: -1.3em;  Also needed for space (tweak if needed) */
-}
-
 
 #outline{
 	padding-left: 0px ;
@@ -190,10 +181,70 @@ a:hover{
 	margin-left: 1vw;
 	margin-top: 100px;
 	border-radius: 5px;
+	width: 130px;
 }
+
+#outline a {
+	padding-left: 5px;
+	border-left: 2px solid transparent;
+	color: #999;
+}
+
+.active > a{
+	padding-left: 2px;
+	color: #5625FF !important;
+	border-left-color: #5625FF !important;
+	font-weight: 500;
+}
+
+.active > a::before {
+  /*content: "\2022";   Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #5625FF; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  /*margin-left: -1.3em;  Also needed for space (tweak if needed) */
+}
+
+
+
 
 .o{
 	list-style: none;
+}
+
+.subOutline{
+	padding-left: 5px;
+}
+
+.subOutline a {
+	font-size: 0.9em;
+}
+
+.subsubOutline {
+	padding-left: 5px;
+}
+
+.subsubOutline a {
+	font-size: 0.7em;
+}
+
+/* hide inactive nested list */
+.o ul.subOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline {
+    display: block;           
+}
+
+/* hide inactive nested list */
+.o ul.subOutline ul.subsubOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline>.active>ul.subsubOutline {
+    display: block;           
 }
 
 
@@ -212,7 +263,7 @@ a:hover{
 --------------------------------------*/
 
 .contentPart{
-	padding-top: 4vh;
+	padding-top: 8vh;
 	padding-left: 11vw;
 	padding-right: 10vw;
 }

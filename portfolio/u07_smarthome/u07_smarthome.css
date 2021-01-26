@@ -2,6 +2,10 @@ html {
 	font-size: 12.4px;
 }
 
+body {
+  position: relative;
+}
+
 @media screen and (max-width:992px) {
 	html {
 		font-size: 12px;
@@ -167,13 +171,34 @@ a:hover{
 	color: #2B5F98;
 }
 
+#outline{
+	padding-left: 3px ;
+	/*background-color: #efefef;*/
+	float: left;
+	position: fixed;
+	margin-left: 1vw;
+	margin-top: 100px;
+	border-radius: 5px;
+	width: 130px;
+}
+
+#outline a {
+	padding-left: 5px;
+	border-left: 2px solid transparent;
+	color: #999;
+}
+
 .active > a{
-	padding-left: 2px;
-	color: #2B5F98;
+	/*padding-left: 2px;*/
+	color: #2B5F98 !important;
+	/*border-left: 2px solid ;*/
+	border-left-color: #2B5F98 !important;
+	font-weight: 500;
 }
 
 .active > a::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  border-left-color: #2B5F98;
+  /*content: "\2022";   Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #2B5F98; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
@@ -182,20 +207,53 @@ a:hover{
 }
 
 
-#outline{
-	padding-left: 0px ;
-	/*background-color: #efefef;*/
-	float: left;
-	position: fixed;
-	margin-left: 1vw;
-	margin-top: 100px;
-	border-radius: 5px;
-}
 
 .o{
 	list-style: none;
 }
 
+.o p {
+	font-size: 1.3rem;
+	color: #2B5F98;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 3px;
+}
+
+.subOutline{
+	padding-left: 5px;
+}
+
+.subOutline a {
+	font-size: 1.1rem;
+
+}
+
+.subsubOutline {
+	padding-left: 5px;
+}
+
+.subsubOutline a {
+	font-size: 0.7rem;
+}
+
+/* hide inactive nested list */
+.o ul.subOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline {
+    display: block;           
+}
+
+/* hide inactive nested list */
+.o ul.subOutline ul.subsubOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline>.active>ul.subsubOutline {
+    display: block;           
+}
 
 @media screen and (max-width:768px) {
 	#outline{
@@ -212,7 +270,7 @@ a:hover{
 --------------------------------------*/
 
 .contentPart{
-	padding-top: 4vh;
+	padding-top: 8vh;
 	padding-left: 11vw;
 	padding-right: 10vw;
 }
@@ -531,8 +589,9 @@ a:hover{
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  /*width: 80%;*/
+  max-width: 1000px;
+  max-height: 1000px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
