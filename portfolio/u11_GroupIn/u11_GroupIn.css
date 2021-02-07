@@ -167,21 +167,6 @@ a:hover{
 	color: #F4976C;
 }
 
-.active > a{
-	padding-left: 2px;
-	color: #F4976C;
-}
-
-.active > a::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #F4976C; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  /*margin-left: -1.3em;  Also needed for space (tweak if needed) */
-}
-
-
 #outline{
 	padding-left: 0px ;
 	/*background-color: #efefef;*/
@@ -190,10 +175,79 @@ a:hover{
 	margin-left: 1vw;
 	margin-top: 100px;
 	border-radius: 5px;
+	width: 130px;
+}
+
+#outline a {
+	padding-left: 5px;
+	border-left: 2px solid transparent;
+	color: #aaa;
+}
+
+.active > a{
+	color: #F4976C !important;
+	border-left-color: #F4976C !important;
+	font-weight: 500;
+}
+
+/*.subOutline .active > a {
+	border-left-color: white !important;
+}*/
+
+.active > a::before {
+  /*content: "\2022";   Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #F4976C; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  /*margin-left: -1.3em;  Also needed for space (tweak if needed) */
 }
 
 .o{
 	list-style: none;
+}
+
+.o p {
+	font-size: 1.3rem;
+	color: #F4976C;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 3px;
+}
+
+.subOutline{
+	padding-left: 5px;
+}
+
+.subOutline a {
+	font-size: 1.1rem;
+
+}
+
+.subsubOutline {
+	padding-left: 5px;
+}
+
+.subsubOutline a {
+	font-size: 0.7rem;
+}
+
+/* hide inactive nested list */
+.o ul.subOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline {
+    display: block;           
+}
+
+/* hide inactive nested list */
+.o ul.subOutline ul.subsubOutline {
+    display: none;           
+}
+/* show active nested list */
+.o .active>ul.subOutline>.active>ul.subsubOutline {
+    display: block;           
 }
 
 
@@ -532,7 +586,7 @@ a:hover{
   margin: auto;
   display: block;
   /*width: 80%;*/
-  max-width: 1000px;
+  max-width: 1200px;
   max-height: 1000px;
 }
 

@@ -189,7 +189,6 @@ a:hover{
 }
 
 .active > a{
-	/*padding-left: 2px;*/
 	color: #2B5F98 !important;
 	/*border-left: 2px solid ;*/
 	border-left-color: #2B5F98 !important;
