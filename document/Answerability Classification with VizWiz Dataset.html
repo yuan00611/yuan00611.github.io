@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Answerability Classification with VizWiz Dataset</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0">Answerability Classification with VizWiz Dataset</h2>
+
+<h6 id="toc_1">Debbie Chen</h6>
+
+<blockquote>
+<p>2020 Machine Learning class competition @ UT Austin ischool</p>  
+<p>Won the second place in the ML class with 58% accuracy</p>
+</blockquote>
+
+<h4 id="toc_2">Dataset - VizWiz</h4>
+
+<p>With the goal to assist blindness overcome their real daily visual challenges via Computer Vision and AI, VizWiz is a dataset with data submitted by users of a mobile phone application, who each took a picture and (optionally) recorded a spoken question about that picture. <a href="https://vizwiz.org/">Website</a></p>
+
+<h4 id="toc_3">Challenge</h4>
+
+<p>When blindness took pictures and asked a question, it will occur so many reasons to let the question can&#39;t be answered. To tackle this issue, we tried to extract the features from both images and questions and built a model to predict the set can be answered or not. 
+<a href="https://vizwiz.org/tasks-and-datasets/vqa/">VQA Challenge</a></p>
+
+<h4 id="toc_4">My proposed prediction method</h4>
+
+<p>In the feature extracting part, I use four image-based features, including blur value, background color, foreground color, and tag of the image. On the other hand, I use three question-based features, including key phrases, sentiment value, and the first word of the question. </p>
+
+<p>To make all the features can be the input of the model, I transfer it separately. I use one hot encoder to transfer foreground color, background color, and the first word of the question into 0 and 1 value. I also limit blur value and sentimental value ​​to three decimal places only. Besides, I make the keyword comparison between the tag of the image and key phrases of the question. If the label of the image is in the question, the value will be 1. Otherwise, the value will be 0.</p>
+
+<p>I choose blur feature is because sometimes the image is too unclear to be answered. Therefore, I think blur value can be a useful feature to help predict. Also, the reason I choose color is that some pictures will be too dark or too bright to be answered. In terms of question-based features, sentiment value may be a useful feature because the emotion of the word sometimes can decide whether you can get an answer or not. Besides, the first word of the question, like What, Where, and Why, can also determine whether you can get the answer or not, too. Therefore, I choose these features.</p>
+
+<p>Last but not least, I compare the tag of the image with key phrases of the question is because that I think if the question asks something that includes in the image, the question will be answer easier.</p>
+
+<h4 id="toc_5">The analysis I conducted with the training/validation datasets and my prediction system design.</h4>
+
+<p>To train the classification model, I prepare 2000 training data, 300 validation data, and 100 test data. In the process, I use a cross-validation method to get an overall accuracy of the model and have a test on the validation dataset to check the accuracy.</p>
+
+<p>In terms of the choice of classification models, I tried some classification model that taught in the class and compared their accuracy. I use KNN, decision tree, SVM, Naive Bayes, Neural Network, these five models. However, I think the result is all similar to the accuracy only around 0.55.</p>
+
+<p>After that, I also did some Emsemble methods like Voting and Adaboost. I think the result of the voting model is the same as all five classification model above. However, I found that Adaboost has an effect that is 0.58, which is a little higher than others. Therefore, I choose the Adaboost model to predict my test data in the end.</p>
+
+<h4 id="toc_6">Coding Detail</h4>
+
+<h5 id="toc_7">(a)Use the VizWiz dataset with its pre-defined train/validation/test split.</h5>
+
+<div><pre class="line-numbers"><code class="language-python"># Framework for lab 3: predicting whether a question about an image can be answered
+img_dir = &quot;https://ivc.ischool.utexas.edu/VizWiz_visualization_img/&quot;
+split = &#39;train&#39;
+#split = &#39;val&#39;
+#split = &#39;test&#39;
+annotation_file = &#39;https://ivc.ischool.utexas.edu/VizWiz_final/vqa_data/Annotations/%s.json&#39; %(split)
+print(annotation_file)
+</code></pre></div>
+
+<h5 id="toc_8">(b) Define a feature representation for each visual question that uses</h5>
+
+<blockquote>
+<p>image-based feature</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from skimage import io
+import matplotlib.pyplot as plt
+%matplotlib inline
+import requests
+import cv2
+from google.colab.patches import cv2_imshow
+import skimage.feature as feature
+from skimage import io, color
+from skimage.transform import resize
+from matplotlib import pyplot as plt
+import skimage
+
+subscription_key = &#39;43e430a1bf9443e28c37ef13aad0baf2&#39;
+vision_base_url = &#39;https://southcentralus.api.cognitive.microsoft.com/vision/v1.0&#39;
+
+vision_analyze_url = vision_base_url + &#39;/analyze?&#39;
+
+# evaluate an image using Microsoft Vision API
+def analyze_image(image_url):
+    # Visualize image
+    image = io.imread(image_url)
+    # plt.imshow(image)
+    # plt.axis(&#39;off&#39;)
+    # plt.show()
+    
+    # Microsoft API headers, params, etc
+    headers = {&#39;Ocp-Apim-Subscription-key&#39;: subscription_key}
+    params = {&#39;visualfeatures&#39;: &#39;Adult,Categories,Description,Color,Faces,ImageType,Tags&#39;}
+    data = {&#39;url&#39;: image_url}
+    
+    # send request, get API response
+    response = requests.post(vision_analyze_url, headers=headers, params=params, json=data)
+    response.raise_for_status()
+    analysis = response.json()
+    return analysis
+
+#calculate blur value
+def variance_of_laplacian(img_url):
+  image = io.imread(img_url)
+  width = 255
+  height = 255
+  image = resize(image, (width, height))
+  greyscale_image = skimage.color.rgb2gray(image) 
+  fm = round(cv2.Laplacian(greyscale_image, cv2.CV_64F).var() * 50, 3)
+  return fm
+    
+def extract_image_features(image_url):
+  #get the Azure computer vision analysis result from picture
+  data = analyze_image(image_url)
+
+  #dominant Foreground Color in picture
+  foreColor = &#39;&#39;
+  if len(data[&#39;color&#39;][&#39;dominantColorForeground&#39;]) == 0:
+    foreColor = &#39;no&#39;
+  else:
+    foreColor = str(data[&#39;color&#39;][&#39;dominantColorForeground&#39;])
+
+  #dominant Background Color in picture
+  backColor = &#39;&#39;
+  if len(data[&#39;color&#39;][&#39;dominantColorBackground&#39;]) == 0:
+    backColor = &#39;no&#39;
+  else:
+    backColor = str(data[&#39;color&#39;][&#39;dominantColorBackground&#39;])
+
+  #key tags in picture
+  keyword = []
+  for i in range(len(data[&#39;tags&#39;])):
+    x = data[&#39;tags&#39;][i][&#39;name&#39;].split(&#39; &#39;)
+    for j in x:
+      keyword.append(str(j))
+  keyword = np.array(keyword)
+
+  #blur value in picture
+  blur = variance_of_laplacian(image_url)
+  
+  return foreColor, backColor, keyword, blur</code></pre></div>
+
+<blockquote>
+<p>question-based features</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">def analyze_question(question):
+  dic = {&quot;documents&quot;: [{&quot;id&quot;:1, &quot;text&quot;: question}]}
+  #print(question)
+  json.dumps(question)
+
+  subscription_key = &#39;43e430a1bf9443e28c37ef13aad0baf2&#39;
+  endpoint = &#39;https://southcentralus.api.cognitive.microsoft.com&#39;
+  
+  sentiment_url = endpoint + &quot;/text/analytics/v2.1/sentiment&quot;
+  headers = {&quot;Ocp-Apim-Subscription-Key&quot;: subscription_key}
+  response = requests.post(sentiment_url, headers=headers, json=dic)
+  sentiments = response.json()
+  sentimentsValue = round(sentiments[&#39;documents&#39;][0][&#39;score&#39;], 3)
+  #pprint(sentiments)
+
+  key = []
+  keyphrase_url = endpoint + &quot;/text/analytics/v2.1/keyphrases&quot;  
+  response = requests.post(keyphrase_url, headers=headers, json=dic)
+  key_phrases = response.json()
+
+  #key = key_phrases[&#39;documents&#39;][0][&#39;keyPhrases&#39;]
+  if(len(key_phrases[&#39;documents&#39;][0][&#39;keyPhrases&#39;])!= 0):
+      for i in key_phrases[&#39;documents&#39;][0][&#39;keyPhrases&#39;]:
+        x = i.split(&#39; &#39;)
+        for j in x:
+          key.append(j);
+
+  return sentimentsValue, key
+
+
+def extract_question_features(question):
+
+  #get the Azure text analusis result from question
+  sentiments, keyword = analyze_question(question)
+
+  #extract first word of question
+  Qword = str(np.array(question.split(&#39; &#39;)[0]))
+  
+  return sentiments, keyword, Qword</code></pre></div>
+
+<blockquote>
+<p>extract features and combined together</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python"># Read the file to extract each dataset example with label
+import requests
+import numpy as np
+
+split_data = requests.get(annotation_file, allow_redirects=True)
+num_VQs = 2000
+k = 0
+data = split_data.json()
+X = []
+y = []
+
+foregroundColor = []
+backgroundColor = []
+questionWord = []
+
+for vq in data[0:num_VQs]:
+  
+  # Extracts features decribing the image
+  image_name = vq[&#39;image&#39;]
+  image_url = img_dir + image_name 
+  forecolor, backcolor, key_vision, blur = extract_image_features(image_url)
+  print(forecolor, backcolor, key_vision, blur)
+
+  # Extracts features decribing the question
+  question = vq[&#39;question&#39;]
+  sentiments, key_text, Qword = extract_question_features(question)
+  print(sentiments, key_text, Qword)
+
+  #check the question keyword is in picture or not
+  keyFeature = 0
+  matchKey = [i for i in key_vision if i in key_text]
+  if len(matchKey) &gt; 0:
+    keyFeature = 1
+
+  # Create a multimodal feature to represent both the image and question
+  multimodal_features = np.array([blur, sentiments, keyFeature])
+  
+  # Prepare features and labels
+  X.append(multimodal_features)
+  label = vq[&#39;answerable&#39;]
+  y.append(label)
+
+  print(k, multimodal_features, label)
+  k += 1
+
+  foregroundColor.append(forecolor)
+  backgroundColor.append(backcolor)
+  questionWord.append(Qword)
+  
+  # print(image_name)
+  # print(question)
+  # print(label)
+  # print(multimodal_features)
+  # visualize_image(image_url)</code></pre></div>
+
+<h5 id="toc_9">(c) Transformations and classification models</h5>
+
+<blockquote>
+<p>One Hot Encoder</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.preprocessing import OneHotEncoder
+
+def oneHotTransform(Tarray):
+  enc = OneHotEncoder()
+  a = np.reshape(Tarray, (-1, 1))
+  enc.fit(a)
+  ans = enc.transform(a).toarray()
+  return ans
+  
+forecolorFeature = oneHotTransform(foregroundColor)
+backcolorFeature = oneHotTransform(backgroundColor)
+QwordFeature = oneHotTransform(questionWord)
+
+X = np.concatenate((X, forecolorFeature, backcolorFeature, QwordFeature), axis = 1)
+</code></pre></div>
+
+<blockquote>
+<p>PCA</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.decomposition import PCA
+
+pca = PCA(n_components=25)
+pca.fit(X_train)
+
+X_train_reduced = pca.transform(X_train)
+X_val_reduced = pca.transform(X_val)
+X_test_reduced = pca.transform(X_test)</code></pre></div>
+
+<blockquote>
+<p>KNN</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score, KFold, StratifiedKFold
+
+training_precision_manhattan = []
+training_precision_euclidean = []
+best_precision = 0
+for i in range(1, 3):
+  
+  neighbor_setting = range(3, 20)
+  for curKvalue in neighbor_setting:
+    
+    knn_clf = KNeighborsClassifier(n_neighbors = curKvalue, p= i)
+
+    kfold_shuffled = StratifiedKFold(n_splits=5, shuffle=True, random_state=20)
+    fold_train_precision = cross_val_score(knn_clf, X_train_reduced, Y_train, cv=kfold_shuffled, scoring = &#39;precision&#39;)
+
+    cur_train_precision = fold_train_precision.mean()
+
+    if(cur_train_precision &gt; best_precision):
+      best_param = {&#39;p&#39;: i, &#39;n_neighbors&#39;: curKvalue}
+      best_precision = cur_train_precision
+    
+    if(i == 1):
+      training_precision_manhattan.append(cur_train_precision)
+    else:
+      training_precision_euclidean.append(cur_train_precision)
+
+knn_clf = KNeighborsClassifier(**best_param)
+knn_clf.fit(X_train_reduced, Y_train)
+
+knn_pred = knn_clf.predict(X_val_reduced)
+print(classification_report(knn_pred, Y_val))</code></pre></div>
+
+<blockquote>
+<p>Decision Tree</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+
+training_precision_gini = []
+training_precision_entropy = []
+
+best_precision = 0
+for i in [&#39;gini&#39;, &#39;entropy&#39;]:
+  
+  tree_setting = range(3, 20)
+  for value in tree_setting:
+    
+    tree_clf = DecisionTreeClassifier(criterion = i, max_depth = value)
+
+    kfold_shuffled = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    fold_train_precision = cross_val_score(tree_clf, X_train_reduced, Y_train, cv=kfold_shuffled, scoring = &#39;precision&#39; )
+
+    cur_train_precision = fold_train_precision.mean()
+
+    if(cur_train_precision &gt; best_precision):
+      best_param = {&#39;criterion&#39;: i, &#39;max_depth&#39;: value}
+      best_precision = cur_train_precision
+    
+    if(i == &#39;gini&#39;):
+      training_precision_gini.append(cur_train_precision)
+    else:
+      training_precision_entropy.append(cur_train_precision)
+      
+tree_clf = DecisionTreeClassifier(**best_param)
+tree_clf.fit(X_train_reduced, Y_train)
+
+tree_pred = tree_clf.predict(X_val_reduced)
+print(classification_report(tree_pred, Y_val))</code></pre></div>
+
+<blockquote>
+<p>SVM</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.svm import SVC
+
+G1 = 1 / (X_train_reduced.var() * X_train_reduced[1].size) + 0.00001
+G2 = 1 / (X_train_reduced.var() * X_train_reduced[1].size) + 0.00002
+
+best_precision = 0
+for curD in range(2,6):
+  for curC in [0.1, 1, 10]:
+    for curG in [&#39;scale&#39;, G1, G2]:
+      param = {&#39;C&#39;: curC, &#39;degree&#39;: curD, &#39;gamma&#39;: curG}
+      print(param)
+      svm_clf = SVC(kernel=&#39;poly&#39;, degree=curD, C=curC, gamma=curG)
+
+      kfold_shuffled = StratifiedKFold(n_splits=5, shuffle=True, random_state=2)
+      fold_train_precision = cross_val_score(svm_clf, X_train_reduced, Y_train, cv=kfold_shuffled, scoring = &#39;precision&#39;)
+      precision = fold_train_precision.mean()
+
+      if precision &gt; best_precision:
+        best_param = {&#39;C&#39;: curC, &#39;degree&#39;: curD, &#39;gamma&#39;: curG}
+        best_precision = precision
+
+svm_clf = SVC(**best_param)
+svm_clf.fit(X_train_reduced, Y_train)
+svm_pred = svm_clf.predict(X_val_reduced)
+print(classification_report(svm_pred, Y_val))</code></pre></div>
+
+<blockquote>
+<p>Naive Bayes</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.naive_bayes import GaussianNB
+
+gaussian_model = GaussianNB()
+gaussian_model.fit(X_train_reduced, Y_train)
+bayes_pred = gaussian_model.predict(X_val_reduced)</code></pre></div>
+
+<blockquote>
+<p>Neural Network</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.neural_network import MLPClassifier
+
+d_hidden = []
+d_nn_acc = []
+
+
+for i in range(1,6):
+  n_hidden_nodes = 64 * i
+  acc = []
+  for j in range(1,6):
+    layers = [n_hidden_nodes] * j
+    mlp = MLPClassifier(activation=&#39;tanh&#39;, hidden_layer_sizes = layers, max_iter=20, verbose=False)
+    mlp.fit(X_train_reduced, Y_train)    
+    acc.append(mlp.score(X_val_reduced,Y_val))
+    print(n_hidden_nodes, j, mlp.loss_, mlp.score(X_val_reduced,Y_val))
+  d_hidden.append(i)
+  d_nn_acc.append(acc)
+  
+n_hidden_nodes = 320
+layers = [n_hidden_nodes] * 5
+mlp = MLPClassifier(activation=&#39;tanh&#39;, hidden_layer_sizes = layers, max_iter=20, verbose=False)
+mlp.fit(X_train_reduced, Y_train)
+acc =   mlp.score(X_val_reduced,Y_val)
+mlp_pred = mlp.predict(X_val_reduced)</code></pre></div>
+
+<blockquote>
+<p>Voting</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.ensemble import VotingClassifier
+
+eclf = VotingClassifier(estimators=[(&#39;knn&#39;, knn_clf), (&#39;dt&#39;, tree_clf), (&#39;svm&#39;, svm_clf), (&#39;nb&#39;, gaussian_model), (&#39;nn&#39;, mlp)], voting=&#39;hard&#39;)
+eclf.fit(X_train_reduced, Y_train)
+vote_pred = eclf.predict(X_val_reduced)
+print(classification_report(vote_pred, Y_val))</code></pre></div>
+
+<blockquote>
+<p>Adaboost</p>
+</blockquote>
+
+<div><pre class="line-numbers"><code class="language-python">from sklearn.ensemble import AdaBoostClassifier
+
+adabooster = AdaBoostClassifier(n_estimators = 40)
+adabooster.fit(X_train_reduced, Y_train)
+adabooster_pred = adabooster.predict(X_val_reduced)
+print(classification_report(adabooster_pred, Y_val))</code></pre></div>
+
+<h5 id="toc_10">(d)The test prediction results</h5>
+
+<div><pre class="line-numbers"><code class="language-python">import csv
+predictions = adabooster.predict(X_test_reduced)
+# f = open(&quot;results.csv&quot;, mode=&quot;w&quot;)
+with open(&quot;/content/drive/My Drive/Colab Notebooks/results.csv&quot;, mode=&quot;w&quot;) as f:
+  results = csv.writer(f)
+  for prediction in predictions:
+    results.writerow([prediction])</code></pre></div>
+
+
+
+
+</body>
+
+</html>
