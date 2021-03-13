@@ -120,7 +120,7 @@ nav.navbar.bootsnav {
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #51d2ff;
+    color: #21b7ed;
     font-size: 20px;
     font-weight: 600;
     padding: 33px 0px 57px;
@@ -140,7 +140,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {padding: 35px 20px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #51d2ff;}
+nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #0e9acc;}
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
     content: "";
@@ -150,7 +150,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     margin-left: 15px;
 }
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {color:#6a708e;}
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #51d2ff;}
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #21b7ed;}
 /*.nav li*/
 
 
@@ -202,7 +202,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #51d2ff;}
     content: " ";
     top:0;
     left:0;
-    background:rgba(0,118,159,.65);
+    background:rgba(0,118,159,.85);
     width:100%;
     height:100%;
 }
@@ -848,12 +848,13 @@ span.single-timeline-horizontal {
 }
 .single-about-txt2 p {
     font-size: 16px;
-    color: #999fb3;
+    color: #666;
     padding: 0 0 5px;
+    line-height: 1.5;
     /*border-bottom: 1px solid #999fb3;*/
 }
 .single-about-txt2 a{
-    color: #51d2ff;
+    color: #21b7ed;
 }
 
 .max{width:100%;height:auto; cursor: pointer;}
