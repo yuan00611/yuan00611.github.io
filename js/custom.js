@@ -32,6 +32,7 @@ $(document).ready(function(){
 			return false;
 		});
 	
+
 	
 	
 	// 2. Smooth Scroll spy
