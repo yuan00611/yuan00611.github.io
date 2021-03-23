@@ -60,7 +60,7 @@ iframe {
         Header
 --------------------------------------*/
 .section-heading h2 {
-	color: #1F26AD;
+	color: #2CB2FF;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -81,7 +81,7 @@ iframe {
 	margin-top: 5px;
 	margin-bottom: 10px;
 	font-size: 1.3rem;
-	color: #83E045;
+	color: #2CB206;
 }
 
 /*-------------------------------------
@@ -90,7 +90,7 @@ iframe {
 
 .heading h3 {
 	text-align: center;
-	color: #1F26AD;
+	color: #2CB2FF;
     font-size: 2.2rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -101,7 +101,7 @@ iframe {
 }
 
 .summary p {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
 .ppage{
@@ -135,7 +135,7 @@ iframe {
 	margin-top: 3vh;
 	text-align: left;
 	font-size: 1.8rem;
-	color: #1F26AD;
+	color: #2CB2FF;
 	font-family: 'Playfair Display', serif;
 }
 
@@ -164,12 +164,12 @@ iframe {
 --------------------------------------*/
 
 a:hover{
-	color: #83E045;
+	color: #2CB206;
 }
 
 .o p {
 	font-size: 1.3rem;
-	color: #1F26AD;
+	color: #2CB2FF;
 	font-weight: 700;
 }
 
@@ -192,14 +192,14 @@ a:hover{
 
 .active > a{
 	padding-left: 2px;
-	color: #1F26AD !important;
-	border-left-color: #1F26AD !important;
+	color: #2CB2FF !important;
+	border-left-color: #2CB2FF !important;
 	font-weight: 500;
 }
 
 .active > a::before {
   /*content: "\2022";   Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #1F26AD; /* Change the color */
+  color: #2CB2FF; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
@@ -275,7 +275,7 @@ a:hover{
 
 .contentPart h2{
 	text-align: center;
-	color: #1F26AD;
+	color: #2CB2FF;
 	font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 600;
@@ -291,7 +291,7 @@ a:hover{
 	font-size: 2rem;
 	margin-top: 5vh;
     /*margin-bottom: 2vh;*/
-	color: #1F26AD;
+	color: #2CB2FF;
 	font-family: 'Playfair Display', serif;
 }
 
@@ -375,7 +375,7 @@ a:hover{
 }
 
 #Challenge span {
-	color: #83E045;
+	color: #2CB206;
 	font-size: 1.6rem;
 	font-weight: 600;
 }
